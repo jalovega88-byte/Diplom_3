@@ -15,7 +15,8 @@ class MainPageLocators:
 
     INGREDIENT_CARD = (
         By.XPATH,
-        "(//a[contains(@class, 'BurgerIngredient_ingredient')])[1]"
+        "//a[contains(@class, 'BurgerIngredient_ingredient')"
+        " and .//p[normalize-space()='Краторная булка N-200i']]"
     )
 
     INGREDIENT_MODAL = (
@@ -30,7 +31,9 @@ class MainPageLocators:
 
     INGREDIENT_COUNTER = (
         By.XPATH,
-        "(//a[contains(@class, 'BurgerIngredient_ingredient')])[last()]//p[contains(@class, 'counter_counter__num')]"
+        "//a[contains(@class, 'BurgerIngredient_ingredient')"
+        " and .//p[normalize-space()='Мясо бессмертных моллюсков Protostomia']]"
+        "//p[contains(@class, 'counter_counter__num')]"
     )
 
     BURGER_CONSTRUCTOR = (
@@ -40,7 +43,8 @@ class MainPageLocators:
 
     FILLING_CARD = (
         By.XPATH,
-        "(//a[contains(@class, 'BurgerIngredient_ingredient')])[last()]"
+        "//a[contains(@class, 'BurgerIngredient_ingredient')"
+        " and .//p[normalize-space()='Мясо бессмертных моллюсков Protostomia']]"
     )
 
     MODAL_OVERLAY = (
@@ -59,10 +63,10 @@ class MainPageLocators:
         "//button[text()='Оформить заказ']"
     )
 
-    # Первая булочка в списке ингредиентов
     BUN_INGREDIENT = (
         By.XPATH,
-        "(//h2[text()='Булки']/following::a[contains(@class, 'BurgerIngredient_ingredient')])[1]"
+        "//a[contains(@class, 'BurgerIngredient_ingredient')"
+        " and .//p[normalize-space()='Краторная булка N-200i']]"
     )
 
     # Верхняя булочка в конструкторе

@@ -39,7 +39,7 @@ class TestOrderInFeed:
                 for number in numbers
             ]
 
-        assert feed_page.wait.until(
+        assert feed_page.wait_for_condition(
             order_is_in_progress,
             message=f"Заказ №{order_number} не появился в разделе «В работе»"
         )
